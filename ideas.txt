@@ -1,0 +1,53 @@
+Just wondering... 
+
+1 - What if I created n functions, where each of one does something different, for example :
+        Func_1 - Changes the route
+        Func_2 - Changes the amount of carried items
+        Func_3 - Adds trips 
+        Func_4 - Removes trips
+    and used them in a random way, like generating a random int and letting the number be the chosen Function.
+
+2 - SOLVED - Similarity_functions
+        For now, the quantity_distance computes takes the entire actual.json and entire standard.json.
+        We want to modify the function so that it actually takes a single route --> Moving a for loop that loops through the 
+        Json file should be enough... right? ---> testing in test.py
+    
+3 - INFO - Quantity_testing is a new testing version, we implement the id in every set to use the id rather than the order 
+
+4 - SOLVED - Same thing said in point 2 should go for other things... inserting a function in a Loop to access routes 
+    rather than having a function with an inner loop..?
+
+5 - SOLVED - So far so good, new problem to check, if the driver adds or skips a city the loop goes out of range
+    5.1 - update.. the problem actually comes up only when the driver skips a city, so just if ACTUALE route is shorter than Standard route
+     MAYBE ... I COULD DO A CHECK AND LOOP ONLY OVER THE SHORTEST ROUTE OF THE TWO (?) -- Ok yes, that was the problem
+
+6 - SOLVED - The different functions must return a single value rather than a list/dictionary, the dictionary/list may be useful
+    later in the main.
+
+7 - INFO - Make the weights adjustable from the function-call : 
+
+    def similarity_routes_weights(route_1, route_2, cities_weight, products_weight, quantity_weight):
+        distance_cities = js_city(route_1, route_2)
+        print('distance cities :',distance_cities)
+        distance_products = hm_merch(route_1,route_2)
+        print('distance produts :',distance_products)
+        distance_quantity = qnt_dist(route_1,route_2)
+        print('distance quantity :',distance_quantity)
+        distance_total = (distance_cities * cities_weight) + (distance_products * products_weight) + (distance_quantity*quantity_weight)
+        print('Weighted distance : ',distance_total)
+        return distance_total
+
+8 - Now the actual routes seem to be considered as the new standard routes... the jaccard distance is now taking into account the 
+    order of the different cities along the route. But does this reward the longest actuals? Can we modify the coefficient? is 0.5 too high?
+    can it be like 1/len(x)?
+
+9 - If a driver goes to a city X 100 times. But he was supposed to there 90 times, the score would be 10.
+    If the same driver goes to city Y 11 times but he was supposed to go there 0 times, the score would be 11.
+    So Y would be higher than X in the ranking. ---> SO ?
+
+10 - Look at the code optimization for the third point of the problem. 
+    Can we remove the "convert_to_standard_structure" function ?
+
+11 - Not focusing on average number of products for driver but instead on average number of products for driver per city?
+
+12 - (point 3) checking if a city is never in the actual. then it must be excluded from the generated actual
