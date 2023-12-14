@@ -3,129 +3,30 @@
     "driver": "B",
     "route": [
       {
-        "from": "Siena",
-        "to": "Matera",
-        "merchandise": {
-          "Ricotta": 8,
-          "Legums": 10
-        }
-      },
-      {
-        "from": "Matera",
-        "to": "Enna",
-        "merchandise": {
-          "Vegan": 22,
-          "Legums": 11
-        }
-      },
-      {
-        "from": "Enna",
-        "to": "Varese",
-        "merchandise": {
-          "Vegan": 4,
-          "Oranges": 11
-        }
-      },
-      {
-        "from": "Varese",
-        "to": "Lecco",
-        "merchandise": {
-          "Oranges": 20,
-          "Corn": 22
-        }
-      },
-      {
-        "from": "Lecco",
-        "to": "Fermo",
-        "merchandise": {
-          "Plums": 35,
-          "Corn": 3
-        }
-      }
-    ]
-  },
-  {
-    "driver": "C",
-    "route": [
-      {
-        "from": "Novara",
-        "to": "Varese",
-        "merchandise": {
-          "Oranges": 4,
-          "Granola": 13,
-          "Ricotta": 23
-        }
-      },
-      {
-        "from": "Varese",
+        "from": "Asti",
         "to": "Foggia",
         "merchandise": {
-          "Vegan": 13,
-          "Granola": 14,
-          "Oranges": 12
+          "Plums": 23,
+          "Vegan": 26,
+          "Granola": 22
         }
       },
       {
         "from": "Foggia",
-        "to": "Rovigo",
+        "to": "Ragusa",
         "merchandise": {
-          "Tomatoes": 20,
-          "Basil": 19,
-          "Legums": 17
-        }
-      },
-      {
-        "from": "Rovigo",
-        "to": "Pisa",
-        "merchandise": {
-          "Ricotta": 4,
-          "Honey": 21,
-          "Plums": 17
-        }
-      }
-    ]
-  },
-  {
-    "driver": "E",
-    "route": [
-      {
-        "from": "Lecco",
-        "to": "Terni",
-        "merchandise": {
-          "Honey": 7,
-          "Granola": 7
-        }
-      },
-      {
-        "from": "Terni",
-        "to": "Fermo",
-        "merchandise": {
-          "Ricotta": 5,
-          "Cherry": 14
-        }
-      },
-      {
-        "from": "Fermo",
-        "to": "Verona",
-        "merchandise": {
+          "Basil": 28,
           "Legums": 15,
-          "Oranges": 16
+          "Yogurt": 17
         }
       },
       {
-        "from": "Verona",
-        "to": "Pisa",
+        "from": "Ragusa",
+        "to": "Modena",
         "merchandise": {
-          "Corn": 13,
-          "Oranges": 7
-        }
-      },
-      {
-        "from": "Pisa",
-        "to": "Udine",
-        "merchandise": {
-          "Oranges": 14,
-          "Honey": 15
+          "Plums": 29,
+          "Tomatoes": 38,
+          "Yogurt": 13
         }
       }
     ]
@@ -134,43 +35,91 @@
     "driver": "A",
     "route": [
       {
-        "from": "Como",
-        "to": "Siena",
-        "merchandise": {
-          "Oranges": 8,
-          "Yogurt": 5
-        }
-      },
-      {
-        "from": "Siena",
-        "to": "Varese",
-        "merchandise": {
-          "Vegan": 24,
-          "Oranges": 25
-        }
-      },
-      {
-        "from": "Varese",
+        "from": "Matera",
         "to": "Ancona",
         "merchandise": {
-          "Granola": 17,
-          "Legums": 15
+          "Ricotta": 25,
+          "Legums": 19,
+          "Vegan": 30
         }
       },
       {
         "from": "Ancona",
-        "to": "Lodi",
+        "to": "Siena",
         "merchandise": {
-          "Plums": 34,
-          "Ricotta": 51
+          "Ricotta": 20,
+          "Corn": 26,
+          "Legums": 3
         }
       },
       {
-        "from": "Lodi",
-        "to": "Fermo",
+        "from": "Siena",
+        "to": "Savona",
         "merchandise": {
-          "Legums": 19,
-          "Tomatoes": 19
+          "Ricotta": 20,
+          "Granola": 21,
+          "Cherry": 27
+        }
+      }
+    ]
+  },
+  {
+    "driver": "E",
+    "route": [
+      {
+        "from": "Biella",
+        "to": "Foggia",
+        "merchandise": {
+          "Yogurt": 23,
+          "Tomatoes": 32,
+          "Ricotta": 15
+        }
+      },
+      {
+        "from": "Foggia",
+        "to": "Ragusa",
+        "merchandise": {
+          "Yogurt": 28,
+          "Plums": 28,
+          "Cherry": 23
+        }
+      },
+      {
+        "from": "Ragusa",
+        "to": "Torino",
+        "merchandise": {
+          "Cherry": 11,
+          "Ricotta": 22,
+          "Honey": 26
+        }
+      }
+    ]
+  },
+  {
+    "driver": "C",
+    "route": [
+      {
+        "from": "Foggia",
+        "to": "Siena",
+        "merchandise": {
+          "Basil": 34,
+          "Cherry": 18
+        }
+      },
+      {
+        "from": "Siena",
+        "to": "Nuoro",
+        "merchandise": {
+          "Vegan": 26,
+          "Plums": 43
+        }
+      },
+      {
+        "from": "Nuoro",
+        "to": "Enna",
+        "merchandise": {
+          "Plums": 23,
+          "Cherry": 13
         }
       }
     ]
@@ -179,43 +128,27 @@
     "driver": "D",
     "route": [
       {
-        "from": "Genova",
-        "to": "Verona",
+        "from": "Nuoro",
+        "to": "Siena",
         "merchandise": {
-          "Yogurt": 6,
-          "Vegan": 10
+          "Cherry": 27,
+          "Plums": 30
         }
       },
       {
-        "from": "Verona",
-        "to": "Cuneo",
+        "from": "Siena",
+        "to": "Ancona",
         "merchandise": {
-          "Tomatoes": 14,
-          "Ricotta": 15
+          "Corn": 35,
+          "Vegan": 17
         }
       },
       {
-        "from": "Cuneo",
-        "to": "Asti",
+        "from": "Ancona",
+        "to": "Chieti",
         "merchandise": {
-          "Tomatoes": 11,
-          "Yogurt": 41
-        }
-      },
-      {
-        "from": "Asti",
-        "to": "Foggia",
-        "merchandise": {
-          "Cherry": 11,
-          "Granola": 23
-        }
-      },
-      {
-        "from": "Foggia",
-        "to": "Terni",
-        "merchandise": {
-          "Cherry": 26,
-          "Oranges": 20
+          "Honey": 31,
+          "Granola": 35
         }
       }
     ]

@@ -67,7 +67,7 @@ def actual_routes_generator(routes):
 
     for i, route in enumerate(routes):
         # n_actual is the number of actual generated for every single standard route
-        n_actual = random.randint(300,5000)
+        n_actual = random.randint(20,500)
         for j in range(n_actual):
                 
             # Adding the "driver" key and value to each route

@@ -2,6 +2,13 @@ import json
 from collections import Counter
 from collections import defaultdict
 
+
+
+with open("json_file/standard.json", "r") as file:
+    standard_route = json.load(file)
+with open("json_file/actual.json", "r") as file:
+    actual_route = json.load(file)
+
 def filter_routes_by_driver(driver_id):
     '''
     Get the routes done by a given driver
@@ -19,14 +26,8 @@ def generate_basket(driver_route):
     return basket
 
 def extract_cities_per_driver(driver_id):
-    '''
-    Extract cities from each route
-    '''
     routes_driver = filter_routes_by_driver(driver_id)
-    city_pairs = []
-    for i in routes_driver:
-        city_pairs += generate_basket(i)
-
+    city_pairs = [city for route in routes_driver for city in generate_basket(route)]
     return city_pairs
 
 def calculate_avg_route_length_driver(driver):
@@ -41,18 +42,8 @@ def calculate_avg_route_length_driver(driver):
     return int(counter/len(routes_driver))
 
 def count_standard_routes(driver):
-    '''
-    Function that counts how many times each standard route is done by a given driver
-    '''
-    standard_counter_dict = {}
     routes_driver = filter_routes_by_driver(driver)
-  
-    for route in routes_driver:
-        if route["sroute"] not in standard_counter_dict:
-            standard_counter_dict[route["sroute"]] = 1
-        else:
-            standard_counter_dict[route["sroute"]] += 1
-    return standard_counter_dict
+    return Counter(route["sroute"] for route in routes_driver)
 
 def create_standard_cities_dict(one_standard_route, value):
     cities_dict = {}
@@ -144,6 +135,7 @@ def merchandise_standard_cities(s_counter):
     Function that takes the actual routes and the driver. It returns a list of all the cities the driver has been to and how many times
     he took each item to that city
     '''
+
     city_counts = defaultdict(lambda: defaultdict(int))
 
     for s, count in s_counter.items():
@@ -159,7 +151,7 @@ def merchandise_standard_cities(s_counter):
 
     result = [{city: dict(items)} for city, items in city_counts.items()]
 
-    return result
+    return result 
 
 def merchandise_actual_cities(driver):
     result = {}
@@ -198,24 +190,19 @@ def merchandise_actual_cities(driver):
     return result,quantity_merch
 
 def calculate_difference_actual_standard(actual_merch, standard_merch):
-    '''
-    Once we have the two different dictionaries (for items in the actual and items in the standard) we use this function 
-    to find the favorite items to carry in the different cities.
-    Results from : - inf to + inf --> high score means the driver likes the item. 
-    '''
     result_dict = {}
 
     for city, items_dict2 in standard_merch.items():
         result_dict[city] = {}
         for item, quantity2 in items_dict2.items():
             quantity1 = actual_merch.get(city, {}).get(item, 0)
-            if(quantity1 != 0):
+            if quantity1 != 0:
                 result_dict[city][item] = quantity1 - quantity2
 
-    # Include cities that are in actual_merch but not in standard_merch
     for city, items_dict1 in actual_merch.items():
         if city not in result_dict:
             result_dict[city] = {}
+
         for item, quantity1 in items_dict1.items():
             if item not in result_dict[city]:
                 result_dict[city][item] = quantity1
@@ -251,33 +238,46 @@ def get_top_items_per_city(relevant_merch, driver):
 
     return top_items
 
+def get_top_items_by_city_and_quantity(dict, driver):
+    for city, items in dict.items():
+        for key in items:
+            dict[city][key]= average_quantity_of_product(driver, city, key)
+    return dict
+
+def average_quantity_of_product(driver,city,product):
+    total_quantity = 0
+    total_routes = 0
+
+    for route_info in actual_route:
+        if route_info['driver'] == driver:
+            route = route_info['route']
+
+            for leg in route:
+                merchandise = leg.get('merchandise', {})
+                destination = leg['to']
+                if product in merchandise and city==destination:
+                    total_quantity += merchandise[product]
+                    total_routes += 1
+    if total_routes == 0:
+        return 0  # Avoid division by zero if the product is not found in any route
+
+    average_quantity = round(total_quantity / total_routes- 0.5) + 1
+    return average_quantity
+
 def analyze_driver_data(driver):
     actual_merch, quantity_merch = merchandise_actual_cities(driver)
     s_counter = count_standard_routes(driver)
     supposed_merch = merchandise_standard_cities(s_counter)
     standard_merch = {k: v for data_dict in supposed_merch for k, v in data_dict.items()}
-
     top_merch = calculate_difference_actual_standard(actual_merch[driver], standard_merch)
-
     top_cities_driver = find_favorite_cities(driver)
-
     relevant_merch = {key: top_merch.get(key, None) for key, _ in top_cities_driver}
-
     top_items_by_city = get_top_items_per_city(relevant_merch, driver)
+    top_items_by_city_and_quantity= get_top_items_by_city_and_quantity(top_items_by_city,driver)
 
-    for key, value in top_items_by_city.items():
-        for sub_key, sub_value in value.items():
-            if key in quantity_merch and sub_key in quantity_merch[key]:
-                top_items_by_city[key][sub_key] = quantity_merch[key][sub_key] 
+    return top_items_by_city_and_quantity
 
-    return top_items_by_city
 
-with open("json_file/standard.json", "r") as file:
-    standard_route = json.load(file)
-with open("json_file/actual.json", "r") as file:
-    actual_route = json.load(file)
-
-# Get the list of drivers
 drivers = get_drivers_from_routes()
 
 final_driver = {}
@@ -303,6 +303,9 @@ for driver, routes in final_driver.items():
         route_list.append(route)
 
     output_data.append({'driver': driver, 'route': route_list})
+
+# Convert the data to JSON
+json_output = json.dumps(output_data, indent=2)
 
 with open("json_file/perfectRoute.json",'w') as outfile:
     json.dump(output_data, outfile, indent = 2)

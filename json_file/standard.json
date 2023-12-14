@@ -3,70 +3,67 @@
     "id": "s0",
     "route": [
       {
-        "from": "Chieti",
-        "to": "Padova",
+        "from": "Lodi",
+        "to": "Verona",
         "merchandise": {
-          "Oranges": 4,
-          "Corn": 8,
-          "Granola": 32,
-          "Tomatoes": 22,
-          "Yogurt": 16
+          "Yogurt": 27
         }
       },
       {
-        "from": "Padova",
-        "to": "Prato",
+        "from": "Verona",
+        "to": "Rimini",
         "merchandise": {
-          "Cherry": 38,
-          "Oranges": 40,
-          "Corn": 45
+          "Ricotta": 2,
+          "Vegan": 11,
+          "Cherry": 29,
+          "Plums": 10
         }
       },
       {
-        "from": "Prato",
-        "to": "Latina",
+        "from": "Rimini",
+        "to": "Rieti",
         "merchandise": {
-          "Basil": 4,
-          "Granola": 6,
-          "Legums": 45,
-          "Ricotta": 9,
-          "Cherry": 46
+          "Ricotta": 20,
+          "Cherry": 23,
+          "Legums": 30,
+          "Yogurt": 22,
+          "Plums": 40
         }
       },
       {
-        "from": "Latina",
-        "to": "Lecce",
+        "from": "Rieti",
+        "to": "Varese",
         "merchandise": {
-          "Ricotta": 7,
-          "Tomatoes": 38,
-          "Basil": 11
+          "Granola": 45,
+          "Tomatoes": 9,
+          "Oranges": 24
         }
       },
       {
-        "from": "Lecce",
+        "from": "Varese",
+        "to": "Bari",
+        "merchandise": {
+          "Ricotta": 10,
+          "Corn": 38,
+          "Cherry": 5,
+          "Plums": 28
+        }
+      },
+      {
+        "from": "Bari",
         "to": "Arezzo",
         "merchandise": {
-          "Honey": 9
+          "Basil": 18,
+          "Legums": 35,
+          "Tomatoes": 5,
+          "Granola": 2
         }
       },
       {
         "from": "Arezzo",
-        "to": "Ragusa",
+        "to": "Napoli",
         "merchandise": {
-          "Ricotta": 20,
-          "Oranges": 37,
-          "Cherry": 35
-        }
-      },
-      {
-        "from": "Ragusa",
-        "to": "Torino",
-        "merchandise": {
-          "Yogurt": 16,
-          "Granola": 27,
-          "Cherry": 27,
-          "Ricotta": 7,
-          "Vegan": 43
+          "Plums": 4
         }
       }
     ]
@@ -75,43 +72,41 @@
     "id": "s1",
     "route": [
       {
-        "from": "Napoli",
-        "to": "Chieti",
-        "merchandise": {
-          "Legums": 8
-        }
-      },
-      {
-        "from": "Chieti",
-        "to": "Trento",
-        "merchandise": {
-          "Tomatoes": 33
-        }
-      },
-      {
-        "from": "Trento",
-        "to": "Lecce",
-        "merchandise": {
-          "Tomatoes": 6,
-          "Legums": 16
-        }
-      },
-      {
-        "from": "Lecce",
+        "from": "Udine",
         "to": "Prato",
         "merchandise": {
-          "Honey": 5,
-          "Cherry": 50,
-          "Plums": 30
+          "Basil": 25,
+          "Vegan": 30
         }
       },
       {
         "from": "Prato",
-        "to": "Bari",
+        "to": "Pisa",
         "merchandise": {
-          "Honey": 20,
-          "Plums": 41,
-          "Corn": 35
+          "Tomatoes": 37,
+          "Vegan": 4,
+          "Basil": 7,
+          "Granola": 26,
+          "Oranges": 49
+        }
+      },
+      {
+        "from": "Pisa",
+        "to": "Lecco",
+        "merchandise": {
+          "Ricotta": 20,
+          "Honey": 20
+        }
+      },
+      {
+        "from": "Lecco",
+        "to": "Parma",
+        "merchandise": {
+          "Corn": 15,
+          "Oranges": 20,
+          "Cherry": 12,
+          "Vegan": 50,
+          "Legums": 2
         }
       }
     ]
@@ -120,69 +115,30 @@
     "id": "s2",
     "route": [
       {
-        "from": "Parma",
+        "from": "Milano",
         "to": "Trento",
         "merchandise": {
-          "Oranges": 46,
-          "Vegan": 49,
-          "Cherry": 7,
-          "Ricotta": 28,
-          "Legums": 9
+          "Granola": 47,
+          "Plums": 42
         }
       },
       {
         "from": "Trento",
-        "to": "Savona",
+        "to": "Lodi",
         "merchandise": {
-          "Corn": 37,
-          "Granola": 36,
-          "Vegan": 33,
-          "Oranges": 15,
-          "Plums": 37
+          "Yogurt": 24,
+          "Corn": 7,
+          "Basil": 33
         }
       },
       {
-        "from": "Savona",
-        "to": "Nuoro",
+        "from": "Lodi",
+        "to": "Lecce",
         "merchandise": {
-          "Legums": 32,
-          "Tomatoes": 40
-        }
-      },
-      {
-        "from": "Nuoro",
-        "to": "Pavia",
-        "merchandise": {
-          "Cherry": 14,
-          "Tomatoes": 22,
-          "Yogurt": 41
-        }
-      },
-      {
-        "from": "Pavia",
-        "to": "Arezzo",
-        "merchandise": {
-          "Honey": 22
-        }
-      },
-      {
-        "from": "Arezzo",
-        "to": "Lucca",
-        "merchandise": {
-          "Honey": 20,
-          "Tomatoes": 47,
-          "Legums": 11
-        }
-      },
-      {
-        "from": "Lucca",
-        "to": "Napoli",
-        "merchandise": {
-          "Granola": 5,
-          "Plums": 20,
-          "Ricotta": 24,
-          "Vegan": 36,
-          "Yogurt": 27
+          "Yogurt": 23,
+          "Cherry": 35,
+          "Legums": 46,
+          "Vegan": 39
         }
       }
     ]
@@ -191,46 +147,76 @@
     "id": "s3",
     "route": [
       {
-        "from": "Roma",
-        "to": "Milano",
+        "from": "Varese",
+        "to": "Lucca",
         "merchandise": {
-          "Plums": 6,
-          "Tomatoes": 27,
-          "Oranges": 2,
-          "Vegan": 24
+          "Tomatoes": 42,
+          "Ricotta": 45,
+          "Yogurt": 7,
+          "Honey": 40
         }
       },
       {
-        "from": "Milano",
-        "to": "Latina",
+        "from": "Lucca",
+        "to": "Cuneo",
         "merchandise": {
-          "Granola": 5
+          "Honey": 29,
+          "Tomatoes": 49,
+          "Oranges": 35
         }
       },
       {
-        "from": "Latina",
+        "from": "Cuneo",
         "to": "Trento",
         "merchandise": {
-          "Vegan": 2,
-          "Plums": 19,
-          "Tomatoes": 21
+          "Legums": 1
         }
       },
       {
         "from": "Trento",
-        "to": "Teramo",
+        "to": "Padova",
         "merchandise": {
-          "Ricotta": 39,
-          "Granola": 6
+          "Legums": 27,
+          "Cherry": 16,
+          "Honey": 19,
+          "Yogurt": 13
         }
       },
       {
-        "from": "Teramo",
-        "to": "Ragusa",
+        "from": "Padova",
+        "to": "Bari",
         "merchandise": {
-          "Oranges": 22,
-          "Legums": 7,
-          "Granola": 8
+          "Yogurt": 19
+        }
+      },
+      {
+        "from": "Bari",
+        "to": "Ancona",
+        "merchandise": {
+          "Plums": 10,
+          "Granola": 4,
+          "Yogurt": 21,
+          "Basil": 35
+        }
+      },
+      {
+        "from": "Ancona",
+        "to": "Enna",
+        "merchandise": {
+          "Corn": 39,
+          "Oranges": 27,
+          "Tomatoes": 29
+        }
+      },
+      {
+        "from": "Enna",
+        "to": "Genova",
+        "merchandise": {
+          "Yogurt": 9,
+          "Legums": 4,
+          "Cherry": 24,
+          "Granola": 47,
+          "Ricotta": 7
         }
       }
     ]
