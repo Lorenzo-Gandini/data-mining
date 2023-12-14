@@ -2,25 +2,6 @@ import json
 from collections import Counter
 from collections import defaultdict
 
-def convert_to_standard_structure(actual_merch):
-    standard_merch = {}
-
-    for category, locations in actual_merch.items():
-        if category not in standard_merch:
-            standard_merch[category] = {}
-
-        for location, items in locations.items():
-            if location not in standard_merch[category]:
-                standard_merch[category][location] = {}
-
-            for item, quantity in items:
-                if item not in standard_merch[category][location]:
-                    standard_merch[category][location][item] = quantity
-                else:
-                    standard_merch[category][location][item] += quantity
-
-    return standard_merch
-
 def filter_routes_by_driver(driver_id):
     '''
     Get the routes done by a given driver
@@ -163,53 +144,25 @@ def merchandise_standard_cities(s_counter):
     Function that takes the actual routes and the driver. It returns a list of all the cities the driver has been to and how many times
     he took each item to that city
     '''
-    lista_merci = []
+    city_counts = defaultdict(lambda: defaultdict(int))
 
     for s, count in s_counter.items():
-        dix = {}  # Initialize the dictionary outside the loop
-
         for route in standard_route:
             if route['id'] == s:
                 for i in range(len(route['route'])):
                     city = route['route'][i]['to']
                     merchandise_list = list(route['route'][i]['merchandise'].keys())
 
-                    if city not in dix:
-                        dix[city] = {}
-
                     for item in merchandise_list:
-                        # Multiply the merchandise count by the corresponding value in s_counter
-                        multiplied_count = route['route'][i]['merchandise'][item] = count
-
-                        # Update the count in the dictionary
-                        if item not in dix[city]:
-                            dix[city][item] = multiplied_count
-                        else:
-                            dix[city][item] += multiplied_count
-
-        lista_merci.append({s: dix})
-
-    lista_merci = collapse_city_counts(lista_merci)
-
-    return lista_merci
-
-def collapse_city_counts(merchandise_list):
-    city_counts = defaultdict(lambda: defaultdict(int))
-
-    for entry in merchandise_list:
-        for key, value in entry.items():
-            for city, items in value.items():
-                for item, count in items.items():
-                    city_counts[city][item] += count
+                        multiplied_count = count
+                        city_counts[city][item] += multiplied_count
 
     result = [{city: dict(items)} for city, items in city_counts.items()]
-    return result  
+
+    return result
 
 def merchandise_actual_cities(driver):
-    '''
-    Function that takes the actual routes and the driver. It returns a list of all the cities the driver has been to and how many times
-    he took each item to that city
-    '''
+    result = {}
     merch_city = {}
     quantity_merch = {}
 
@@ -222,27 +175,27 @@ def merchandise_actual_cities(driver):
             destination = leg['to']
             merchandise = leg['merchandise']
 
-            for item, quantity in merchandise.items():
-                if destination not in merch_city:
-                    merch_city[destination] = {}
-                    quantity_merch[destination] = {}
+            if destination not in merch_city:
+                merch_city[destination] = {}
+                quantity_merch[destination] = {}
 
-                # If it is the first time the given product appears in the given city
+            for item, quantity in merchandise.items():
                 if item not in merch_city[destination]:
                     merch_city[destination][item] = 1
                     quantity_merch[destination][item] = quantity
-
                 else:
                     merch_city[destination][item] += 1
                     quantity_merch[destination][item] += quantity
-                
+
                 quantity_merch[destination][item] = quantity_merch[destination][item] / merch_city[destination][item]
                 quantity_merch[destination][item] = round(quantity_merch[destination][item] - 0.5) + 1
 
     for destination, items in merch_city.items():
-        merch_city[destination] = (sorted(items.items(), key=lambda x: x[1], reverse=True))
+        merch_city[destination] = dict(sorted(items.items(), key=lambda x: x[1], reverse=True))
 
-    return merch_city, quantity_merch
+    result[driver] = merch_city
+
+    return result,quantity_merch
 
 def calculate_difference_actual_standard(actual_merch, standard_merch):
     '''
@@ -289,7 +242,7 @@ def get_top_items_per_city(relevant_merch, driver):
     '''
     top_items = {}
     for city, items in relevant_merch.items():
-        # Check if items is not None before processing
+        # Check if items is not None 
         if items is not None:
             top_items[city] = dict(sorted(items.items(), key=lambda x: x[1], reverse=True)[:calculate_avg_products_per_route_driver(driver)])
         else:
@@ -303,7 +256,6 @@ def analyze_driver_data(driver):
     s_counter = count_standard_routes(driver)
     supposed_merch = merchandise_standard_cities(s_counter)
     standard_merch = {k: v for data_dict in supposed_merch for k, v in data_dict.items()}
-    actual_merch = convert_to_standard_structure({driver: actual_merch})
 
     top_merch = calculate_difference_actual_standard(actual_merch[driver], standard_merch)
 
@@ -320,7 +272,6 @@ def analyze_driver_data(driver):
 
     return top_items_by_city
 
-
 with open("json_file/standard.json", "r") as file:
     standard_route = json.load(file)
 with open("json_file/actual.json", "r") as file:
@@ -333,7 +284,6 @@ final_driver = {}
 
 for driver in drivers:
     final_driver[driver] = analyze_driver_data(driver)
-
 
 output_data = []
 
@@ -353,10 +303,6 @@ for driver, routes in final_driver.items():
         route_list.append(route)
 
     output_data.append({'driver': driver, 'route': route_list})
-
-# Convert the data to JSON
-json_output = json.dumps(output_data, indent=2)
-print(json_output)
 
 with open("json_file/perfectRoute.json",'w') as outfile:
     json.dump(output_data, outfile, indent = 2)
