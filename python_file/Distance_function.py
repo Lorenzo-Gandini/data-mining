@@ -58,7 +58,10 @@ def js_city(route_1, route_2):
                     if element in shortest_list:
                         cummulative_score += 0.5
         #1- res per avere la distanza
-    return 1 - (cummulative_score / len(set(city_shingles_route_1+city_shingles_route_2)))
+    if len(set(city_shingles_route_1+city_shingles_route_2))==0:
+        return 0
+    else:
+        return 1- (cummulative_score / len(set(city_shingles_route_1+city_shingles_route_2)))
 
 def create_one_hot(route, groceries):
     '''
