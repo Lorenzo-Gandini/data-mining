@@ -14,18 +14,22 @@ def find_min_value(dictionary):
     
     return min_key,min_value
 
-def retrieve_values_by_key(list_of_dictionaries, target_value):
+def retrieve_values_by_key(id_distances_list, target_value):
     '''
-    Function that searches the 'target_value' among the keys in list_of_dictionaries  
+    Function that searches the 'target_value' among the keys in id_distances_list  
     '''
     result = {}
-    
-    for dictionary in list_of_dictionaries:
-        for key, value in dictionary.items():
-            if target_value in key:
-                result[key] = value
-                
+
+    for dictionary in id_distances_list:
+        for key_tuple, value in dictionary.items():
+            if any(target_value in element for element in key_tuple):
+                # Merge the keys from the tuple into a single key
+                merged_key = "-".join(key_tuple)
+                result[merged_key] = value
+
     return result
+
+
 
 # Shingling of the routes. It extracts the cities the drivers go through.
 def shingling(route):
@@ -205,6 +209,8 @@ def new_standard(standard_route,actual_routes):
                 
     return id_distances_list
 
+start = time.time()
+
 with open("json_file/standard.json","r") as file:
     standard_route = json.load(file)
 with open("json_file/actual.json","r") as file:
@@ -212,14 +218,17 @@ with open("json_file/actual.json","r") as file:
 with open("pre_processing/json_file/groceries.json","r") as groceries_file:
     groceries = json.load(groceries_file)
 
-for standard in standard_route:
-    id_distances_list = new_standard(standard,actual_route)
+new_standard_route = {}
 
+for standard in standard_route:
+
+    id_distances_list = new_standard(standard,actual_route)
     final_distances = {}
     id_list = []
 
-    for id in actual_route:
-        id_list.append(id['id'])
+    for actual in actual_route:
+        if(standard['id'] == actual['sroute']):
+            id_list.append(actual['id'])
 
     for id_value in id_list:
         result = retrieve_values_by_key(id_distances_list, id_value)
@@ -231,5 +240,28 @@ for standard in standard_route:
         if total_distance > 0:
             final_distances[id_value] = total_distance
 
-    min_key,min_value = find_min_value(final_distances)
-    print("Original route :", standard['id'],"New standard route : ",min_key,"Similarity :",min_value)
+        # Print or perform other operations if needed
+        min_key,min_value = find_min_value(final_distances)
+    #print("Original route :", standard['id'],"New standard route : ",min_key,"Distance :",min_value)
+
+    if min_key != None :
+        new_standard_route[standard['id']] = min_key
+    else:
+        new_standard_route[standard['id']] = standard['id']
+
+output = []
+
+for id,st in enumerate(new_standard_route):
+    print(new_standard_route[st])
+
+    for act in actual_route:
+        if act["id"] == new_standard_route[st]:
+            result_list = [{'id': 's'+str(id), 'route': act['route']}]
+            output.append(result_list)
+            break
+
+with open("json_file/recStandard.json",'w') as outfile:
+    json.dump(output, outfile, indent = 2)
+
+end = time.time()
+print(end-start)

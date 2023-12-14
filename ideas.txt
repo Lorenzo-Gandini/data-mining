@@ -45,9 +45,12 @@ Just wondering...
     If the same driver goes to city Y 11 times but he was supposed to go there 0 times, the score would be 11.
     So Y would be higher than X in the ranking. ---> SO ?
 
-10 - Look at the code optimization for the third point of the problem. 
+10 - SOLVED - Look at the code optimization for the third point of the problem. 
     Can we remove the "convert_to_standard_structure" function ?
 
 11 - Not focusing on average number of products for driver but instead on average number of products for driver per city?
 
-12 - (point 3) checking if a city is never in the actual. then it must be excluded from the generated actual
+12 - SOLVED - (point 3) checking if a city is never in the actual. then it must be excluded from the generated actual
+
+13 - Problem that came up during review. If there are no actual routes generated on a singolar standard route, the result may be "None" in the comparison
+     We may need to add a check when dumping the final result on a json.
