@@ -56,7 +56,7 @@ def standard_routes_generator(cities,groceries,n_standard_routes):
         
     return routes
 
-def actual_routes_generator(routes):
+def actual_routes_generator(routes,boundaries):
     '''
     Function that takes the standard routes and duplicate each standard a random number of times.
     '''
@@ -67,7 +67,8 @@ def actual_routes_generator(routes):
 
     for i, route in enumerate(routes):
         # n_actual is the number of actual generated for every single standard route
-        n_actual = random.randint(100,5000)
+        # boundaries is the variable passed by input from the main to make things quicker.
+        n_actual = random.randint(boundaries[0],boundaries[1])
         for j in range(n_actual):
                 
             # Adding the "driver" key and value to each route

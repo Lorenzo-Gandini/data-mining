@@ -26,10 +26,7 @@ def retrieve_values_by_key(id_distances_list, target_value):
                 # Merge the keys from the tuple into a single key
                 merged_key = "-".join(key_tuple)
                 result[merged_key] = value
-
     return result
-
-
 
 # Shingling of the routes. It extracts the cities the drivers go through.
 def shingling(route):
@@ -46,26 +43,36 @@ def shingling(route):
 
 # Jaccard similarity of two different routes.
 def js_city(route_1, route_2):
-    city_shingles_route_1= shingling(route_1)
-    city_shingles_route_2= shingling (route_2)
     cummulative_score = 0
-    longest_list = city_shingles_route_2
-    shortest_list = city_shingles_route_1
-    if len(city_shingles_route_1) > len(city_shingles_route_2):
-        longest_list = city_shingles_route_1
-        shortest_list = city_shingles_route_2
-        for index, element in enumerate(longest_list):
-            if index < len(shortest_list):
-                if element == shortest_list[index]:
-                    cummulative_score += 1
-                if element != shortest_list[index]:
-                    if element in shortest_list:
-                        cummulative_score += 0.5
-        #1- res per avere la distanza
-    if len(set(city_shingles_route_1+city_shingles_route_2))==0:
-        return 0
+    city_shingles_route_1 = shingling(route_1)
+    city_shingles_route_2 = shingling(route_2)
+
+    if len(city_shingles_route_1)>len(city_shingles_route_2):
+        max_len,min_len = len(city_shingles_route_1),len(city_shingles_route_2)
+        max_shingle, min_shingle = city_shingles_route_1 , city_shingles_route_2
     else:
-        return 1- (cummulative_score / len(set(city_shingles_route_1+city_shingles_route_2)))
+        max_len,min_len = len(city_shingles_route_2),len(city_shingles_route_1)
+        max_shingle, min_shingle = city_shingles_route_2 , city_shingles_route_1
+
+    # loops through the two shingle's lists
+    for i in range(min_len):
+        for j in range(max_len):
+            if min_shingle[i] == max_shingle[j]:
+                # if the values are in the same index +1
+                if i == j:
+                    cummulative_score += 1
+                # if not +0.5
+                else:
+                    cummulative_score += 0.5
+
+    total_elements = len(set(city_shingles_route_1 + city_shingles_route_2))
+
+    if total_elements == 0:
+        return 0
+
+    similarity_score = 1 - (cummulative_score / total_elements)
+
+    return similarity_score
 
 def create_one_hot(route, groceries):
     '''
@@ -169,6 +176,9 @@ def distance_routes(route_1, route_2,city_weight,merch_weight,quantity_weight):
     Function that takes in input route_1 and route_2 and computes the total distance summing distance_cities,
     distance_products and distance_quantity each one multiplied by a weight.
     '''
+    # if the two confronted routes are the same routes, distance is automatically 0
+    if route_1['id'] == route_2['id']:
+        return 0
     distance_cities = js_city(route_1, route_2)
     distance_products = hm_merch(route_1,route_2)
     distance_quantity = qnt_dist(route_1,route_2)
@@ -186,27 +196,21 @@ def new_standard(standard_route,actual_routes):
         "sroute": standard_route['id']
         }])
 
-    id = standard_route['id']
+    id = standard_route['id']    
+    dist_with_standard, id_distances_list, id_distances = 0, [], {}
 
-    dist_with_standard = 0
-    id_distances_list = []
-    id_distances = {}
-    
+    # Loops through the entire list of actual
     for i in range(len(actual_routes)):
+        # Picks only the actual based on the given standard  
         if actual_routes[i]['sroute'] == id:
-            dis_curr = distance_routes(standard_route,actual_routes[i],0.50,0.35,0.15)
-            dist_with_standard += dis_curr
-            
+            # Loops from i+1 to avoid calculating the same distance more than once
             for j in range(i,len(actual_routes)):
                 if actual_routes[i]['sroute'] == actual_routes[j]['sroute'] and actual_routes[i]['id'] != actual_routes[j]['id']:
-                    
+                    dist = distance_routes(actual_routes[i], actual_routes[j],0.50,0.35,0.15)
                     id_distances = {
-                        (actual_routes[i]['id'],actual_routes[j]['id']) : distance_routes(actual_routes[i], actual_routes[j],0.50,0.35,0.15)
+                        (actual_routes[i]['id'],actual_routes[j]['id']) : dist
                     }
                     id_distances_list.append(id_distances)
-                
-                    dis_curr += distance_routes(actual_routes[i], actual_routes[j],0.50,0.35,0.15)
-                
     return id_distances_list
 
 start = time.time()
@@ -242,7 +246,7 @@ for standard in standard_route:
 
         # Print or perform other operations if needed
         min_key,min_value = find_min_value(final_distances)
-    #print("Original route :", standard['id'],"New standard route : ",min_key,"Distance :",min_value)
+    print("Original route :", standard['id'],"New standard route : ",min_key,"Distance :",min_value)
 
     if min_key != None :
         new_standard_route[standard['id']] = min_key
@@ -252,8 +256,6 @@ for standard in standard_route:
 output = []
 
 for id,st in enumerate(new_standard_route):
-    print(new_standard_route[st])
-
     for act in actual_route:
         if act["id"] == new_standard_route[st]:
             result_list = [{'id': 's'+str(id), 'route': act['route']}]

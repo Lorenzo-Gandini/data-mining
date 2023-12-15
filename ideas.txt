@@ -52,5 +52,10 @@ Just wondering...
 
 12 - SOLVED - (point 3) checking if a city is never in the actual. then it must be excluded from the generated actual
 
-13 - Problem that came up during review. If there are no actual routes generated on a singolar standard route, the result may be "None" in the comparison
+13 - SOLVED- Problem that came up during review. If there are no actual routes generated on a singolar standard route, the result may be "None" in the comparison
      We may need to add a check when dumping the final result on a json.
+    
+14 - PROBLEM - 
+    id_1:  s4 id_2:  a19 TOTAL DISTANCE:  0.6979622966207759
+    ...
+    id_1:  a19 id_2:  s4 TOTAL DISTANCE:  0.7292122966207759
