@@ -2,15 +2,12 @@ import numpy as np
 import json 
 import time
 
-def find_min_value(dictionary):
+def find_min_value(final_distances):
     '''
-    Function that returns the key with the lowest value inside the dictionary in input
+    Function that returns the key with the lowest value inside the input dictionary input
     '''
-    if not dictionary:
-        return None, None  # Return None for both key and value if the dictionary is empty
-
-    min_key = min(dictionary, key=dictionary.get)
-    min_value = dictionary[min_key]
+    min_key = min(final_distances, key=final_distances.get)
+    min_value = final_distances[min_key]
     
     return min_key,min_value
 
@@ -171,7 +168,7 @@ def qnt_dist(route_1, route_2):
 
 # Total distance. It computes all the different routes together and put them together to produce the total distance.
 # REMEMBER, total DISTANCE, so the lower the better.
-def distance_routes(route_1, route_2,city_weight,merch_weight,quantity_weight):
+def distance_routes(route_1, route_2):
     '''
     Function that takes in input route_1 and route_2 and computes the total distance summing distance_cities,
     distance_products and distance_quantity each one multiplied by a weight.
@@ -197,7 +194,7 @@ def new_standard(standard_route,actual_routes):
         }])
 
     id = standard_route['id']    
-    dist_with_standard, id_distances_list, id_distances = 0, [], {}
+    id_distances_list, id_distances = [], {}
 
     # Loops through the entire list of actual
     for i in range(len(actual_routes)):
@@ -206,7 +203,7 @@ def new_standard(standard_route,actual_routes):
             # Loops from i+1 to avoid calculating the same distance more than once
             for j in range(i,len(actual_routes)):
                 if actual_routes[i]['sroute'] == actual_routes[j]['sroute'] and actual_routes[i]['id'] != actual_routes[j]['id']:
-                    dist = distance_routes(actual_routes[i], actual_routes[j],0.50,0.35,0.15)
+                    dist = distance_routes(actual_routes[i], actual_routes[j])
                     id_distances = {
                         (actual_routes[i]['id'],actual_routes[j]['id']) : dist
                     }
@@ -222,7 +219,9 @@ with open("json_file/actual.json","r") as file:
 with open("pre_processing/json_file/groceries.json","r") as groceries_file:
     groceries = json.load(groceries_file)
 
+city_weight,merch_weight,quantity_weight = 0.50,0.35,0.15
 new_standard_route = {}
+act_counter = 0
 
 for standard in standard_route:
 
@@ -236,34 +235,39 @@ for standard in standard_route:
 
     for id_value in id_list:
         result = retrieve_values_by_key(id_distances_list, id_value)
-        
         # Calculate the sum of distances for the current ID
         total_distance = sum(result.values())
         
         # Update the final_distances dictionary
         if total_distance > 0:
             final_distances[id_value] = total_distance
+        else:
+            final_distances[id_value] = None
 
         # Print or perform other operations if needed
         min_key,min_value = find_min_value(final_distances)
+    
+    if 'a' in str(min_key):
+        act_counter += 1
+         
+    new_standard_route[standard['id']] = min_key
+
     print("Original route :", standard['id'],"New standard route : ",min_key,"Distance :",min_value)
-
-    if min_key != None :
-        new_standard_route[standard['id']] = min_key
-    else:
-        new_standard_route[standard['id']] = standard['id']
-
+        
 output = []
 
-for id,st in enumerate(new_standard_route):
+id = 0
+for st in new_standard_route:
     for act in actual_route:
         if act["id"] == new_standard_route[st]:
-            result_list = [{'id': 's'+str(id), 'route': act['route']}]
-            output.append(result_list)
-            break
-
+            if act['route'] not in [item[0]['route'] for item in output]:
+                output.append( [{'id': 's'+str(id), 'route': act['route']}])
+                id+=1
+            else : id-=1
+                
 with open("json_file/recStandard.json",'w') as outfile:
     json.dump(output, outfile, indent = 2)
 
+print('numero di st : ',100-act_counter, 'numero di act :',act_counter)
 end = time.time()
 print(end-start)

@@ -9,8 +9,8 @@ with open("pre_processing/json_file/groceries.json","r") as file:
 with open("pre_processing/json_file/cities.json","r") as file:
     cities = json.load(file)
 
-n_standard_routes = 5
-n_actual = [0,30]
+n_standard_routes = 100
+n_actual = [0,2]
 
 standard_routes = route_generator.standard_routes_generator(cities,groceries,n_standard_routes)
 
