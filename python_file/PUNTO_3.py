@@ -2,8 +2,6 @@ import json
 from collections import Counter
 from collections import defaultdict
 
-
-
 with open("json_file/standard.json", "r") as file:
     standard_route = json.load(file)
 with open("json_file/actual.json", "r") as file:
