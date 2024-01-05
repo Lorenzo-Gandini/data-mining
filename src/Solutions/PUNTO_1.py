@@ -6,10 +6,8 @@ def recStandard(city_weight,merch_weight,quantity_weight,dataset):
     
     standard_route = set_dataset.st(dataset)
     actual_route = set_dataset.act(dataset)
-    
-    new_standard_route = {}
-    act_counter = 0
-    
+
+    new_standard_route = {}    
     for standard in standard_route:
 
         id_distances_list = Distance_function.new_standard(standard,actual_route,city_weight,merch_weight,quantity_weight)
@@ -30,12 +28,9 @@ def recStandard(city_weight,merch_weight,quantity_weight,dataset):
             
                 
         new_standard_route[standard['id']] = min_key
-        if min_key != standard['id']:
-                act_counter+=1
 
         print("Original route :", standard['id'],"New standard route : ",min_key,"Distance :",min_value)
     output = []
-    print("Numero di actual :",act_counter)
 
     id = 0
     for st in new_standard_route:
@@ -48,5 +43,3 @@ def recStandard(city_weight,merch_weight,quantity_weight,dataset):
                     
     with open("results/recStandard"+str(dataset)+".json",'w') as outfile:
         json.dump(output, outfile, indent = 2)
-
-    return act_counter

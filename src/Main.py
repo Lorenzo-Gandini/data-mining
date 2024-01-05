@@ -8,7 +8,7 @@ city_weight,merch_weight,quantity_weight = 0.55,0.30,0.15
 begin= time.time()
 lista_time=[]
 act_list = []
-for i in range(1):
+for i in range(10):
     act_list.append(PUNTO_1.recStandard(
         city_weight,merch_weight,quantity_weight,i
     ))
@@ -20,5 +20,3 @@ for i in range(1):
     
     end= time.time()
     # SEARCH FOR 'UPDATE' in the code 
-
-print(act_list)
