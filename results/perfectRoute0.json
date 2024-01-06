@@ -69,47 +69,6 @@
     ]
   },
   {
-    "driver": "B",
-    "route": [
-      {
-        "from": "Bari",
-        "to": "Cuneo",
-        "merchandise": {
-          "Banana": 27,
-          "Mela": 21,
-          "Ananas": 29,
-          "Pera": 21,
-          "Mango": 38,
-          "Arancia": 25
-        }
-      },
-      {
-        "from": "Cuneo",
-        "to": "Napoli",
-        "merchandise": {
-          "Pompelmo": 29,
-          "Ananas": 17,
-          "Fragola": 19,
-          "Mango": 33,
-          "Limone": 39
-        }
-      },
-      {
-        "from": "Napoli",
-        "to": "Pavia",
-        "merchandise": {
-          "Limone": 24,
-          "Mela": 24,
-          "Pera": 26,
-          "Ananas": 25,
-          "Kiwi": 17,
-          "Uva": 25,
-          "Pesca": 24
-        }
-      }
-    ]
-  },
-  {
     "driver": "D",
     "route": [
       {
@@ -189,6 +148,47 @@
           "Pesca": 23,
           "Pera": 18,
           "Uva": 29
+        }
+      }
+    ]
+  },
+  {
+    "driver": "B",
+    "route": [
+      {
+        "from": "Bari",
+        "to": "Cuneo",
+        "merchandise": {
+          "Banana": 27,
+          "Mela": 21,
+          "Ananas": 29,
+          "Pera": 21,
+          "Mango": 38,
+          "Arancia": 25
+        }
+      },
+      {
+        "from": "Cuneo",
+        "to": "Napoli",
+        "merchandise": {
+          "Pompelmo": 29,
+          "Ananas": 17,
+          "Fragola": 19,
+          "Mango": 33,
+          "Limone": 39
+        }
+      },
+      {
+        "from": "Napoli",
+        "to": "Pavia",
+        "merchandise": {
+          "Limone": 24,
+          "Mela": 24,
+          "Pera": 26,
+          "Ananas": 25,
+          "Kiwi": 17,
+          "Uva": 25,
+          "Pesca": 24
         }
       }
     ]
