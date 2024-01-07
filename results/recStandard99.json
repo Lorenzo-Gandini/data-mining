@@ -1,0 +1,656 @@
+[
+  [
+    {
+      "id": "s0",
+      "route": [
+        {
+          "from": "Rovigo",
+          "to": "Fermo",
+          "merchandise": {
+            "Pompelmo": 5
+          }
+        },
+        {
+          "from": "Fermo",
+          "to": "Prato",
+          "merchandise": {
+            "Uva": 11
+          }
+        },
+        {
+          "from": "Prato",
+          "to": "Bari",
+          "merchandise": {
+            "Arancia": 33,
+            "Limone": 3,
+            "Uva": 3,
+            "Ciliegia": 44,
+            "Ananas": 35,
+            "Banana": 4,
+            "Pera": 37,
+            "Mela": 29,
+            "Mango": 15
+          }
+        },
+        {
+          "from": "Bari",
+          "to": "Genova",
+          "merchandise": {
+            "Fragola": 30,
+            "Mango": 38,
+            "Arancia": 6,
+            "Pera": 12,
+            "Limone": 11,
+            "Pesca": 7
+          }
+        },
+        {
+          "from": "Genova",
+          "to": "Lecco",
+          "merchandise": {
+            "Pesca": 43,
+            "Ananas": 38,
+            "Pompelmo": 1,
+            "Pera": 37,
+            "Limone": 13
+          }
+        },
+        {
+          "from": "Lecco",
+          "to": "Fermo",
+          "merchandise": {
+            "Kiwi": 41,
+            "Limone": 6,
+            "Ananas": 21,
+            "Mela": 8,
+            "Banana": 6,
+            "Pompelmo": 32
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "id": "s1",
+      "route": [
+        {
+          "from": "Pavia",
+          "to": "Milano",
+          "merchandise": {
+            "Ciliegia": 26,
+            "Pera": 6,
+            "Pesca": 14
+          }
+        },
+        {
+          "from": "Milano",
+          "to": "Fermo",
+          "merchandise": {
+            "Mela": 43
+          }
+        },
+        {
+          "from": "Fermo",
+          "to": "Verona",
+          "merchandise": {
+            "Pesca": 49,
+            "Kiwi": 3,
+            "Fragola": 9,
+            "Mela": 40,
+            "Limone": 47,
+            "Banana": 50,
+            "Uva": 23
+          }
+        },
+        {
+          "from": "Verona",
+          "to": "Novara",
+          "merchandise": {
+            "Ananas": 1,
+            "Kiwi": 14
+          }
+        },
+        {
+          "from": "Novara",
+          "to": "Varese",
+          "merchandise": {
+            "Limone": 45,
+            "Uva": 11,
+            "Mela": 31,
+            "Ciliegia": 40,
+            "Mango": 39,
+            "Pompelmo": 33,
+            "Banana": 50,
+            "Kiwi": 6,
+            "Ananas": 18
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "id": "s2",
+      "route": [
+        {
+          "from": "Novara",
+          "to": "Pisa",
+          "merchandise": {
+            "Ciliegia": 7,
+            "Banana": 41,
+            "Arancia": 9,
+            "Limone": 3,
+            "Pesca": 30,
+            "Fragola": 6,
+            "Mango": 32,
+            "Pompelmo": 44,
+            "Mela": 27
+          }
+        },
+        {
+          "from": "Pisa",
+          "to": "Asti",
+          "merchandise": {
+            "Pesca": 12,
+            "Ananas": 48,
+            "Mango": 35,
+            "Uva": 21,
+            "Kiwi": 6,
+            "Pera": 19,
+            "Fragola": 16
+          }
+        },
+        {
+          "from": "Asti",
+          "to": "Lecco",
+          "merchandise": {
+            "Mela": 40,
+            "Mango": 33,
+            "Pera": 34,
+            "Ciliegia": 18,
+            "Fragola": 22,
+            "Banana": 20,
+            "Arancia": 20,
+            "Ananas": 46,
+            "Uva": 7,
+            "Pesca": 18,
+            "Pompelmo": 3
+          }
+        },
+        {
+          "from": "Lecco",
+          "to": "Napoli",
+          "merchandise": {
+            "Limone": 17,
+            "Ciliegia": 15,
+            "Fragola": 18,
+            "Pera": 5,
+            "Arancia": 12,
+            "Pompelmo": 40,
+            "Banana": 13,
+            "Pesca": 49,
+            "Mango": 25
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "id": "s3",
+      "route": [
+        {
+          "from": "Bari",
+          "to": "Ancona",
+          "merchandise": {
+            "Pesca": 46,
+            "Mango": 44,
+            "Banana": 32,
+            "Ananas": 34,
+            "Pompelmo": 9,
+            "Kiwi": 1
+          }
+        },
+        {
+          "from": "Ancona",
+          "to": "Cuneo",
+          "merchandise": {
+            "Pesca": 4,
+            "Fragola": 34,
+            "Kiwi": 11,
+            "Ciliegia": 11,
+            "Pompelmo": 9,
+            "Mango": 6,
+            "Mela": 1,
+            "Pera": 16
+          }
+        },
+        {
+          "from": "Cuneo",
+          "to": "Teramo",
+          "merchandise": {
+            "Fragola": 46,
+            "Pompelmo": 27,
+            "Arancia": 48,
+            "Kiwi": 47,
+            "Ciliegia": 14,
+            "Mango": 44,
+            "Limone": 1,
+            "Ananas": 11,
+            "Mela": 33,
+            "Pera": 27
+          }
+        },
+        {
+          "from": "Teramo",
+          "to": "Torino",
+          "merchandise": {
+            "Ciliegia": 28,
+            "Mela": 4
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "id": "s4",
+      "route": [
+        {
+          "from": "Roma",
+          "to": "Enna",
+          "merchandise": {
+            "Mango": 30,
+            "Kiwi": 12,
+            "Mela": 11,
+            "Fragola": 36
+          }
+        },
+        {
+          "from": "Enna",
+          "to": "Pisa",
+          "merchandise": {
+            "Ananas": 11
+          }
+        },
+        {
+          "from": "Pisa",
+          "to": "Napoli",
+          "merchandise": {
+            "Ciliegia": 1,
+            "Uva": 2
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "id": "s5",
+      "route": [
+        {
+          "from": "Bari",
+          "to": "Foggia",
+          "merchandise": {
+            "Uva": 35
+          }
+        },
+        {
+          "from": "Foggia",
+          "to": "Rieti",
+          "merchandise": {
+            "Kiwi": 31,
+            "Limone": 13,
+            "Arancia": 16,
+            "Mela": 5,
+            "Pesca": 37,
+            "Ananas": 5,
+            "Ciliegia": 22,
+            "Pera": 21
+          }
+        },
+        {
+          "from": "Rieti",
+          "to": "Roma",
+          "merchandise": {
+            "Kiwi": 18,
+            "Ananas": 37
+          }
+        },
+        {
+          "from": "Roma",
+          "to": "Lecco",
+          "merchandise": {
+            "Mango": 2,
+            "Fragola": 5,
+            "Pompelmo": 34,
+            "Kiwi": 45,
+            "Banana": 20,
+            "Ananas": 10,
+            "Pera": 30,
+            "Uva": 13,
+            "Arancia": 6,
+            "Pesca": 8
+          }
+        },
+        {
+          "from": "Lecco",
+          "to": "Chieti",
+          "merchandise": {
+            "Ciliegia": 29,
+            "Banana": 44,
+            "Mango": 28,
+            "Mela": 16
+          }
+        },
+        {
+          "from": "Chieti",
+          "to": "Verona",
+          "merchandise": {
+            "Ciliegia": 34,
+            "Ananas": 1,
+            "Limone": 29,
+            "Mango": 9,
+            "Arancia": 18
+          }
+        },
+        {
+          "from": "Verona",
+          "to": "Asti",
+          "merchandise": {
+            "Banana": 21,
+            "Pompelmo": 41,
+            "Ciliegia": 9
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "id": "s6",
+      "route": [
+        {
+          "from": "Matera",
+          "to": "Bari",
+          "merchandise": {
+            "Banana": 45,
+            "Ciliegia": 31,
+            "Arancia": 17,
+            "Kiwi": 41,
+            "Mela": 17,
+            "Ananas": 12
+          }
+        },
+        {
+          "from": "Bari",
+          "to": "Cuneo",
+          "merchandise": {
+            "Mango": 40,
+            "Fragola": 50,
+            "Arancia": 33,
+            "Pera": 24,
+            "Ciliegia": 3,
+            "Limone": 23,
+            "Pesca": 17,
+            "Pompelmo": 11
+          }
+        },
+        {
+          "from": "Cuneo",
+          "to": "Varese",
+          "merchandise": {
+            "Ciliegia": 21,
+            "Fragola": 5
+          }
+        },
+        {
+          "from": "Varese",
+          "to": "Foggia",
+          "merchandise": {
+            "Ciliegia": 50,
+            "Pera": 26,
+            "Kiwi": 21,
+            "Pompelmo": 30
+          }
+        },
+        {
+          "from": "Foggia",
+          "to": "Lodi",
+          "merchandise": {
+            "Banana": 21,
+            "Kiwi": 34,
+            "Fragola": 3,
+            "Ananas": 5,
+            "Ciliegia": 12,
+            "Pera": 38,
+            "Limone": 46,
+            "Uva": 9,
+            "Mela": 40
+          }
+        },
+        {
+          "from": "Lodi",
+          "to": "Lecco",
+          "merchandise": {
+            "Pera": 5,
+            "Banana": 8,
+            "Ciliegia": 41,
+            "Kiwi": 21,
+            "Uva": 47
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "id": "s7",
+      "route": [
+        {
+          "from": "Rovigo",
+          "to": "Verona",
+          "merchandise": {
+            "Banana": 42,
+            "Kiwi": 14,
+            "Uva": 33,
+            "Fragola": 26,
+            "Pesca": 13
+          }
+        },
+        {
+          "from": "Verona",
+          "to": "Lucca",
+          "merchandise": {
+            "Fragola": 47,
+            "Mela": 1,
+            "Uva": 38,
+            "Pera": 44,
+            "Kiwi": 3
+          }
+        },
+        {
+          "from": "Lucca",
+          "to": "Ragusa",
+          "merchandise": {
+            "Arancia": 43,
+            "Mango": 21
+          }
+        },
+        {
+          "from": "Ragusa",
+          "to": "Enna",
+          "merchandise": {
+            "Ananas": 22,
+            "Arancia": 39,
+            "Mela": 36,
+            "Ciliegia": 46,
+            "Uva": 38,
+            "Limone": 2,
+            "Kiwi": 4,
+            "Mango": 10,
+            "Pompelmo": 1,
+            "Pesca": 32
+          }
+        },
+        {
+          "from": "Enna",
+          "to": "Novara",
+          "merchandise": {
+            "Limone": 34,
+            "Pompelmo": 13,
+            "Kiwi": 8,
+            "Fragola": 39,
+            "Banana": 34
+          }
+        },
+        {
+          "from": "Novara",
+          "to": "Lecco",
+          "merchandise": {
+            "Arancia": 40,
+            "Fragola": 20,
+            "Mango": 38,
+            "Banana": 23
+          }
+        },
+        {
+          "from": "Lecco",
+          "to": "Terni",
+          "merchandise": {
+            "Mango": 33
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "id": "s8",
+      "route": [
+        {
+          "from": "Como",
+          "to": "Napoli",
+          "merchandise": {
+            "Mango": 43,
+            "Arancia": 20,
+            "Limone": 48,
+            "Banana": 3,
+            "Pesca": 3,
+            "Ciliegia": 35,
+            "Kiwi": 23,
+            "Mela": 1,
+            "Uva": 9,
+            "Pera": 10
+          }
+        },
+        {
+          "from": "Napoli",
+          "to": "Udine",
+          "merchandise": {
+            "Pompelmo": 33,
+            "Uva": 20,
+            "Fragola": 44,
+            "Arancia": 31,
+            "Pera": 21,
+            "Kiwi": 23,
+            "Banana": 48,
+            "Ananas": 46,
+            "Mela": 35,
+            "Pesca": 22
+          }
+        },
+        {
+          "from": "Udine",
+          "to": "Pavia",
+          "merchandise": {
+            "Uva": 20,
+            "Mango": 22,
+            "Banana": 20,
+            "Pesca": 26,
+            "Kiwi": 12,
+            "Ciliegia": 18,
+            "Arancia": 39,
+            "Fragola": 23,
+            "Pompelmo": 14
+          }
+        },
+        {
+          "from": "Pavia",
+          "to": "Nuoro",
+          "merchandise": {
+            "Limone": 46,
+            "Mela": 48,
+            "Uva": 2,
+            "Arancia": 36,
+            "Pompelmo": 39,
+            "Ananas": 13,
+            "Mango": 42,
+            "Pera": 13,
+            "Banana": 35
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "id": "s9",
+      "route": [
+        {
+          "from": "Lecce",
+          "to": "Rimini",
+          "merchandise": {
+            "Ananas": 21,
+            "Pera": 17,
+            "Kiwi": 14,
+            "Fragola": 39,
+            "Banana": 25,
+            "Ciliegia": 2,
+            "Mela": 20,
+            "Uva": 34,
+            "Limone": 20
+          }
+        },
+        {
+          "from": "Rimini",
+          "to": "Parma",
+          "merchandise": {
+            "Mango": 49,
+            "Ananas": 24,
+            "Arancia": 30,
+            "Banana": 2,
+            "Kiwi": 49,
+            "Pera": 22
+          }
+        },
+        {
+          "from": "Parma",
+          "to": "Lecco",
+          "merchandise": {
+            "Ananas": 2,
+            "Uva": 42,
+            "Mango": 13,
+            "Ciliegia": 40
+          }
+        },
+        {
+          "from": "Lecco",
+          "to": "Latina",
+          "merchandise": {
+            "Arancia": 6,
+            "Mela": 45,
+            "Mango": 46,
+            "Uva": 49,
+            "Kiwi": 28,
+            "Banana": 43,
+            "Limone": 39,
+            "Fragola": 23,
+            "Pera": 40
+          }
+        }
+      ]
+    }
+  ]
+]

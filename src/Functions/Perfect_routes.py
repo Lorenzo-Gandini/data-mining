@@ -79,11 +79,10 @@ def find_favorite_cities(driver):
     cities_counts = Counter(city_driver)
     frequent_cities_actual = {city: count for city, count in cities_counts.items()}
     cities_to_do = find_cities_standard(driver) 
-    
     result_dict = {}
     for key in frequent_cities_actual:
         result_dict[key] = (frequent_cities_actual[key] - cities_to_do.get(key, 0)) + (frequent_cities_actual[key] / 2)
-    
+
     n = calculate_avg_route_length_driver(driver)
     result_dict_ordered = sorted(result_dict.items(), key=lambda x: x[1], reverse=True)[:n]    
 
@@ -98,8 +97,6 @@ def get_drivers_from_routes():
       drivers_list.append(route['driver'])
 
     return set(drivers_list)
-
-
 
 def merchandise_standard_cities(s_counter):
     '''
@@ -168,8 +165,6 @@ def calculate_difference_actual_standard(actual_merch, standard_merch):
             if item not in result_dict[city]:
                 result_dict[city][item] = (count_act) + count_act / 2
     return result_dict
-
-
 
 def get_top_items_per_city(relevant_merch, driver,driver_habits):
     '''

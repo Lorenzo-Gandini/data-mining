@@ -1,0 +1,202 @@
+[
+  {
+    "driver": "B",
+    "route": [
+      {
+        "from": "Bari",
+        "to": "Cuneo",
+        "merchandise": {
+          "Banana": 27,
+          "Uva": 19,
+          "Kiwi": 18,
+          "Mela": 21,
+          "Ananas": 29,
+          "Ciliegia": 20
+        }
+      },
+      {
+        "from": "Cuneo",
+        "to": "Teramo",
+        "merchandise": {
+          "Pompelmo": 25,
+          "Pera": 29,
+          "Uva": 19,
+          "Fragola": 39,
+          "Mango": 31,
+          "Banana": 25,
+          "Ananas": 22
+        }
+      },
+      {
+        "from": "Teramo",
+        "to": "Ancona",
+        "merchandise": {
+          "Kiwi": 9,
+          "Ananas": 22,
+          "Mango": 40,
+          "Pompelmo": 14,
+          "Banana": 36
+        }
+      }
+    ]
+  },
+  {
+    "driver": "A",
+    "route": [
+      {
+        "from": "Bari",
+        "to": "Cuneo",
+        "merchandise": {
+          "Kiwi": 22,
+          "Uva": 18,
+          "Mela": 25,
+          "Banana": 23,
+          "Ananas": 25,
+          "Ciliegia": 26
+        }
+      },
+      {
+        "from": "Cuneo",
+        "to": "Teramo",
+        "merchandise": {
+          "Arancia": 21,
+          "Pompelmo": 22,
+          "Mango": 35,
+          "Uva": 20,
+          "Mela": 25,
+          "Pesca": 37,
+          "Pera": 25,
+          "Fragola": 30
+        }
+      },
+      {
+        "from": "Teramo",
+        "to": "Genova",
+        "merchandise": {
+          "Mela": 26,
+          "Fragola": 34,
+          "Uva": 31,
+          "Ananas": 15
+        }
+      }
+    ]
+  },
+  {
+    "driver": "E",
+    "route": [
+      {
+        "from": "Bari",
+        "to": "Prato",
+        "merchandise": {
+          "Ciliegia": 30,
+          "Uva": 24,
+          "Mela": 22
+        }
+      },
+      {
+        "from": "Prato",
+        "to": "Teramo",
+        "merchandise": {
+          "Pompelmo": 27,
+          "Ciliegia": 18,
+          "Arancia": 21,
+          "Mango": 30,
+          "Uva": 13,
+          "Kiwi": 24
+        }
+      },
+      {
+        "from": "Teramo",
+        "to": "Cuneo",
+        "merchandise": {
+          "Uva": 19,
+          "Mela": 21,
+          "Banana": 22,
+          "Kiwi": 19,
+          "Ananas": 23,
+          "Fragola": 37
+        }
+      },
+      {
+        "from": "Cuneo",
+        "to": "Rovigo",
+        "merchandise": {
+          "Arancia": 25,
+          "Ciliegia": 19,
+          "Pompelmo": 16
+        }
+      }
+    ]
+  },
+  {
+    "driver": "D",
+    "route": [
+      {
+        "from": "Bari",
+        "to": "Torino",
+        "merchandise": {
+          "Mela": 13,
+          "Ciliegia": 20,
+          "Pompelmo": 25,
+          "Banana": 26
+        }
+      },
+      {
+        "from": "Torino",
+        "to": "Cuneo",
+        "merchandise": {
+          "Kiwi": 21,
+          "Uva": 18,
+          "Mela": 32,
+          "Ananas": 13,
+          "Banana": 32,
+          "Fragola": 35
+        }
+      },
+      {
+        "from": "Cuneo",
+        "to": "Prato",
+        "merchandise": {
+          "Uva": 22,
+          "Kiwi": 28
+        }
+      }
+    ]
+  },
+  {
+    "driver": "C",
+    "route": [
+      {
+        "from": "Bari",
+        "to": "Ancona",
+        "merchandise": {
+          "Banana": 34,
+          "Limone": 25,
+          "Pesca": 43,
+          "Pompelmo": 18,
+          "Ciliegia": 36
+        }
+      },
+      {
+        "from": "Ancona",
+        "to": "Torino",
+        "merchandise": {
+          "Pompelmo": 23,
+          "Arancia": 21,
+          "Pera": 18,
+          "Mela": 13,
+          "Uva": 29
+        }
+      },
+      {
+        "from": "Torino",
+        "to": "Prato",
+        "merchandise": {
+          "Pera": 22,
+          "Pompelmo": 23,
+          "Uva": 15
+        }
+      }
+    ]
+  }
+]
