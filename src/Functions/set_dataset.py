@@ -1,7 +1,7 @@
 import json
 
 # Select the chosen dataset
-dataset = 99
+dataset = 10
 
 def groceries():
     with open("data/pre_processing/json_file/groceries.json","r") as groceries_file:

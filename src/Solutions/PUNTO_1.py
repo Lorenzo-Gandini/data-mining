@@ -29,7 +29,7 @@ def recStandard(city_weight,merch_weight,quantity_weight,dataset):
                 
         new_standard_route[standard['id']] = min_key
 
-        print("Original route :", standard['id'],"New standard route : ",min_key,"Distance :",min_value)
+        #print("Original route :", standard['id'],"New standard route : ",min_key,"Distance :",min_value)
     output = []
 
     id = 0

@@ -136,59 +136,7 @@
       }
     ]
   },
-  {
-    "id": "s3",
-    "route": [
-      {
-        "from": "Bari",
-        "to": "Ancona",
-        "merchandise": {
-          "Pesca": 46,
-          "Mango": 44,
-          "Banana": 44,
-          "Ananas": 20,
-          "Pompelmo": 13,
-          "Kiwi": 1
-        }
-      },
-      {
-        "from": "Ancona",
-        "to": "Cuneo",
-        "merchandise": {
-          "Pesca": 49,
-          "Fragola": 34,
-          "Uva": 1,
-          "Kiwi": 11,
-          "Ciliegia": 11,
-          "Pompelmo": 9
-        }
-      },
-      {
-        "from": "Cuneo",
-        "to": "Teramo",
-        "merchandise": {
-          "Uva": 15,
-          "Fragola": 46,
-          "Pompelmo": 27,
-          "Arancia": 13,
-          "Kiwi": 47,
-          "Ciliegia": 14,
-          "Mango": 44,
-          "Limone": 1
-        }
-      },
-      {
-        "from": "Teramo",
-        "to": "Torino",
-        "merchandise": {
-          "Pera": 18,
-          "Ciliegia": 25,
-          "Pompelmo": 29,
-          "Mela": 4
-        }
-      }
-    ]
-  },
+  
   {
     "id": "s2",
     "route": [
@@ -253,37 +201,60 @@
     ]
   },
   {
-    "id": "s4",
+    "id": "s3",
     "route": [
       {
-        "from": "Roma",
-        "to": "Enna",
+        "from": "Bari",
+        "to": "Ancona",
         "merchandise": {
-          "Mango": 30,
-          "Kiwi": 12,
-          "Mela": 11,
-          "Fragola": 36
+          "Pesca": 46,
+          "Mango": 44,
+          "Banana": 44,
+          "Ananas": 20,
+          "Pompelmo": 13,
+          "Kiwi": 1
         }
       },
       {
-        "from": "Enna",
-        "to": "Pisa",
+        "from": "Ancona",
+        "to": "Cuneo",
         "merchandise": {
-          "Ananas": 11
+          "Pesca": 49,
+          "Fragola": 34,
+          "Uva": 1,
+          "Kiwi": 11,
+          "Ciliegia": 11,
+          "Pompelmo": 9
         }
       },
       {
-        "from": "Pisa",
-        "to": "Napoli",
+        "from": "Cuneo",
+        "to": "Teramo",
         "merchandise": {
-          "Ciliegia": 1,
-          "Uva": 2
+          "Uva": 15,
+          "Fragola": 46,
+          "Pompelmo": 27,
+          "Arancia": 13,
+          "Kiwi": 47,
+          "Ciliegia": 14,
+          "Mango": 44,
+          "Limone": 1
+        }
+      },
+      {
+        "from": "Teramo",
+        "to": "Torino",
+        "merchandise": {
+          "Pera": 18,
+          "Ciliegia": 25,
+          "Pompelmo": 29,
+          "Mela": 4
         }
       }
     ]
   },
   {
-    "id": "s5",
+    "id": "s4",
     "route": [
       {
         "from": "Bari",
@@ -363,82 +334,37 @@
     ]
   },
   {
-    "id": "s6",
+    "id": "s5",
     "route": [
       {
-        "from": "Matera",
-        "to": "Bari",
+        "from": "Roma",
+        "to": "Enna",
         "merchandise": {
-          "Banana": 45,
-          "Ciliegia": 31,
-          "Arancia": 17,
-          "Kiwi": 41,
-          "Mela": 17,
-          "Ananas": 12
+          "Mango": 30,
+          "Kiwi": 12,
+          "Mela": 11,
+          "Fragola": 36
         }
       },
       {
-        "from": "Bari",
-        "to": "Cuneo",
+        "from": "Enna",
+        "to": "Pisa",
         "merchandise": {
-          "Mango": 40,
-          "Fragola": 50,
-          "Arancia": 33,
-          "Pera": 24,
-          "Ciliegia": 3,
-          "Limone": 23,
-          "Pesca": 17,
-          "Pompelmo": 11
+          "Ananas": 11
         }
       },
       {
-        "from": "Cuneo",
-        "to": "Varese",
+        "from": "Pisa",
+        "to": "Napoli",
         "merchandise": {
-          "Ciliegia": 21,
-          "Fragola": 5
-        }
-      },
-      {
-        "from": "Varese",
-        "to": "Foggia",
-        "merchandise": {
-          "Ciliegia": 50,
-          "Pera": 26,
-          "Kiwi": 21,
-          "Pompelmo": 30
-        }
-      },
-      {
-        "from": "Foggia",
-        "to": "Lodi",
-        "merchandise": {
-          "Banana": 21,
-          "Kiwi": 34,
-          "Fragola": 3,
-          "Ananas": 5,
-          "Ciliegia": 12,
-          "Pera": 38,
-          "Limone": 46,
-          "Uva": 9,
-          "Mela": 40
-        }
-      },
-      {
-        "from": "Lodi",
-        "to": "Lecco",
-        "merchandise": {
-          "Pera": 5,
-          "Banana": 8,
-          "Ciliegia": 41,
-          "Kiwi": 21,
-          "Uva": 47
+          "Ciliegia": 1,
+          "Uva": 2
         }
       }
     ]
   },
   {
-    "id": "s7",
+    "id": "s6",
     "route": [
       {
         "from": "Rovigo",
@@ -517,7 +443,132 @@
     ]
   },
   {
+    "id": "s7",
+    "route": [
+      {
+        "from": "Matera",
+        "to": "Bari",
+        "merchandise": {
+          "Banana": 45,
+          "Ciliegia": 31,
+          "Arancia": 17,
+          "Kiwi": 41,
+          "Mela": 17,
+          "Ananas": 12
+        }
+      },
+      {
+        "from": "Bari",
+        "to": "Cuneo",
+        "merchandise": {
+          "Mango": 40,
+          "Fragola": 50,
+          "Arancia": 33,
+          "Pera": 24,
+          "Ciliegia": 3,
+          "Limone": 23,
+          "Pesca": 17,
+          "Pompelmo": 11
+        }
+      },
+      {
+        "from": "Cuneo",
+        "to": "Varese",
+        "merchandise": {
+          "Ciliegia": 21,
+          "Fragola": 5
+        }
+      },
+      {
+        "from": "Varese",
+        "to": "Foggia",
+        "merchandise": {
+          "Ciliegia": 50,
+          "Pera": 26,
+          "Kiwi": 21,
+          "Pompelmo": 30
+        }
+      },
+      {
+        "from": "Foggia",
+        "to": "Lodi",
+        "merchandise": {
+          "Banana": 21,
+          "Kiwi": 34,
+          "Fragola": 3,
+          "Ananas": 5,
+          "Ciliegia": 12,
+          "Pera": 38,
+          "Limone": 46,
+          "Uva": 9,
+          "Mela": 40
+        }
+      },
+      {
+        "from": "Lodi",
+        "to": "Lecco",
+        "merchandise": {
+          "Pera": 5,
+          "Banana": 8,
+          "Ciliegia": 41,
+          "Kiwi": 21,
+          "Uva": 47
+        }
+      }
+    ]
+  },
+  {
     "id": "s8",
+    "route": [
+      {
+        "from": "Lecce",
+        "to": "Rimini",
+        "merchandise": {
+          "Ananas": 32,
+          "Pera": 17,
+          "Uva": 20,
+          "Kiwi": 14,
+          "Pesca": 20,
+          "Fragola": 39,
+          "Banana": 20,
+          "Ciliegia": 2
+        }
+      },
+      {
+        "from": "Rimini",
+        "to": "Lecco",
+        "merchandise": {
+          "Mela": 41,
+          "Mango": 49,
+          "Ananas": 47,
+          "Arancia": 30,
+          "Uva": 13,
+          "Pompelmo": 48,
+          "Banana": 4
+        }
+      },
+      {
+        "from": "Lecco",
+        "to": "Latina",
+        "merchandise": {
+          "Arancia": 6,
+          "Mela": 38,
+          "Mango": 46,
+          "Ciliegia": 3,
+          "Pompelmo": 19,
+          "Uva": 49,
+          "Pera": 43,
+          "Kiwi": 28,
+          "Ananas": 43,
+          "Pesca": 39
+        }
+      }
+    ]
+  }
+  ,
+  
+  {
+    "id": "s9",
     "route": [
       {
         "from": "Como",
@@ -579,54 +630,6 @@
           "Mango": 42,
           "Pera": 13,
           "Banana": 35
-        }
-      }
-    ]
-  },
-  {
-    "id": "s9",
-    "route": [
-      {
-        "from": "Lecce",
-        "to": "Rimini",
-        "merchandise": {
-          "Ananas": 32,
-          "Pera": 17,
-          "Uva": 20,
-          "Kiwi": 14,
-          "Pesca": 20,
-          "Fragola": 39,
-          "Banana": 20,
-          "Ciliegia": 2
-        }
-      },
-      {
-        "from": "Rimini",
-        "to": "Lecco",
-        "merchandise": {
-          "Mela": 41,
-          "Mango": 49,
-          "Ananas": 47,
-          "Arancia": 30,
-          "Uva": 13,
-          "Pompelmo": 48,
-          "Banana": 4
-        }
-      },
-      {
-        "from": "Lecco",
-        "to": "Latina",
-        "merchandise": {
-          "Arancia": 6,
-          "Mela": 38,
-          "Mango": 46,
-          "Ciliegia": 3,
-          "Pompelmo": 19,
-          "Uva": 49,
-          "Pera": 43,
-          "Kiwi": 28,
-          "Ananas": 43,
-          "Pesca": 39
         }
       }
     ]
