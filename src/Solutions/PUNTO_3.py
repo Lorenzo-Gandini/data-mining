@@ -31,4 +31,4 @@ def perfectRoutes():
     with open("results/perfectRoute"+str(dataset)+".json",'w') as outfile:
         json.dump(output_data, outfile, indent = 2)
 
-    #print(final_driver)
+    print(final_driver)

@@ -1,0 +1,257 @@
+[
+  {
+    "driver": "D",
+    "route": [
+      {
+        "from": "Terni",
+        "to": "Torino",
+        "merchandise": {
+          "Ciliegia": 22,
+          "Mela": 32,
+          "Banana": 25,
+          "Mango": 16,
+          "Fragola": 20
+        }
+      },
+      {
+        "from": "Torino",
+        "to": "Matera",
+        "merchandise": {
+          "Uva": 30,
+          "Kiwi": 24,
+          "Pesca": 21,
+          "Ciliegia": 19,
+          "Pompelmo": 23
+        }
+      },
+      {
+        "from": "Matera",
+        "to": "Lucca",
+        "merchandise": {
+          "Fragola": 19,
+          "Mango": 21,
+          "Banana": 28,
+          "Uva": 23
+        }
+      },
+      {
+        "from": "Lucca",
+        "to": "Fermo",
+        "merchandise": {
+          "Pera": 29,
+          "Limone": 28,
+          "Fragola": 20,
+          "Ciliegia": 27,
+          "Mela": 30,
+          "Ananas": 26,
+          "Banana": 17
+        }
+      }
+    ]
+  },
+  {
+    "driver": "C",
+    "route": [
+      {
+        "from": "Torino",
+        "to": "Terni",
+        "merchandise": {
+          "Mela": 30,
+          "Banana": 30,
+          "Uva": 26,
+          "Limone": 31,
+          "Ciliegia": 25
+        }
+      },
+      {
+        "from": "Terni",
+        "to": "Udine",
+        "merchandise": {
+          "Pompelmo": 30,
+          "Ananas": 24,
+          "Ciliegia": 25,
+          "Arancia": 23,
+          "Mango": 25
+        }
+      },
+      {
+        "from": "Udine",
+        "to": "Genova",
+        "merchandise": {
+          "Mela": 29,
+          "Limone": 15,
+          "Kiwi": 21,
+          "Pesca": 27
+        }
+      },
+      {
+        "from": "Genova",
+        "to": "Bari",
+        "merchandise": {
+          "Fragola": 25,
+          "Uva": 19,
+          "Kiwi": 30,
+          "Mango": 31
+        }
+      },
+      {
+        "from": "Bari",
+        "to": "Matera",
+        "merchandise": {
+          "Ciliegia": 23,
+          "Kiwi": 23,
+          "Uva": 28,
+          "Mela": 21,
+          "Ananas": 24
+        }
+      }
+    ]
+  },
+  {
+    "driver": "E",
+    "route": [
+      {
+        "from": "Torino",
+        "to": "Terni",
+        "merchandise": {
+          "Pesca": 30,
+          "Pera": 22,
+          "Pompelmo": 27,
+          "Banana": 31,
+          "Mela": 32
+        }
+      },
+      {
+        "from": "Terni",
+        "to": "Matera",
+        "merchandise": {
+          "Uva": 25,
+          "Kiwi": 27,
+          "Ciliegia": 24,
+          "Pompelmo": 24,
+          "Ananas": 31,
+          "Pesca": 22
+        }
+      },
+      {
+        "from": "Matera",
+        "to": "Lucca",
+        "merchandise": {
+          "Fragola": 18,
+          "Mango": 24,
+          "Uva": 25,
+          "Banana": 25
+        }
+      },
+      {
+        "from": "Lucca",
+        "to": "Bari",
+        "merchandise": {
+          "Uva": 24,
+          "Limone": 21,
+          "Kiwi": 26,
+          "Ciliegia": 16
+        }
+      }
+    ]
+  },
+  {
+    "driver": "B",
+    "route": [
+      {
+        "from": "Terni",
+        "to": "Matera",
+        "merchandise": {
+          "Uva": 24,
+          "Kiwi": 27,
+          "Banana": 29,
+          "Ananas": 26,
+          "Ciliegia": 24,
+          "Pesca": 21
+        }
+      },
+      {
+        "from": "Matera",
+        "to": "Torino",
+        "merchandise": {
+          "Kiwi": 20,
+          "Ciliegia": 22,
+          "Banana": 24,
+          "Arancia": 19,
+          "Pompelmo": 21
+        }
+      },
+      {
+        "from": "Torino",
+        "to": "Fermo",
+        "merchandise": {
+          "Limone": 30,
+          "Pera": 24,
+          "Arancia": 29,
+          "Mela": 30,
+          "Ciliegia": 17,
+          "Ananas": 18
+        }
+      },
+      {
+        "from": "Fermo",
+        "to": "Udine",
+        "merchandise": {
+          "Ciliegia": 19,
+          "Pompelmo": 26,
+          "Ananas": 23,
+          "Arancia": 25,
+          "Mela": 24
+        }
+      }
+    ]
+  },
+  {
+    "driver": "A",
+    "route": [
+      {
+        "from": "Torino",
+        "to": "Terni",
+        "merchandise": {
+          "Uva": 30,
+          "Mela": 33,
+          "Banana": 28,
+          "Pompelmo": 27,
+          "Kiwi": 28
+        }
+      },
+      {
+        "from": "Terni",
+        "to": "Bari",
+        "merchandise": {
+          "Limone": 26,
+          "Uva": 21,
+          "Pesca": 29,
+          "Fragola": 24
+        }
+      },
+      {
+        "from": "Bari",
+        "to": "Udine",
+        "merchandise": {
+          "Arancia": 23,
+          "Ananas": 19,
+          "Mela": 19,
+          "Mango": 23
+        }
+      },
+      {
+        "from": "Udine",
+        "to": "Fermo",
+        "merchandise": {
+          "Pera": 28,
+          "Limone": 33,
+          "Ciliegia": 23,
+          "Pesca": 34,
+          "Ananas": 27,
+          "Banana": 22
+        }
+      }
+    ]
+  }
+]

@@ -105,6 +105,7 @@ def merch(route_1, route_2):
 
     groceries = list(set(groceries))
     return groceries
+   
 
 # Compute Hamming distance. Basically it is the number of different bits taken bit-wise.  
 def hm_merch(route_1, route_2,groceries):

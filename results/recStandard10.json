@@ -4,77 +4,6 @@
       "id": "s0",
       "route": [
         {
-          "from": "Rovigo",
-          "to": "Fermo",
-          "merchandise": {
-            "Pompelmo": 5
-          }
-        },
-        {
-          "from": "Fermo",
-          "to": "Prato",
-          "merchandise": {
-            "Uva": 11
-          }
-        },
-        {
-          "from": "Prato",
-          "to": "Bari",
-          "merchandise": {
-            "Arancia": 33,
-            "Limone": 3,
-            "Uva": 3,
-            "Ciliegia": 44,
-            "Ananas": 35,
-            "Banana": 4,
-            "Pera": 37,
-            "Mela": 29,
-            "Mango": 15
-          }
-        },
-        {
-          "from": "Bari",
-          "to": "Genova",
-          "merchandise": {
-            "Fragola": 30,
-            "Mango": 38,
-            "Arancia": 6,
-            "Pera": 12,
-            "Limone": 11,
-            "Pesca": 7
-          }
-        },
-        {
-          "from": "Genova",
-          "to": "Lecco",
-          "merchandise": {
-            "Pesca": 43,
-            "Ananas": 38,
-            "Pompelmo": 1,
-            "Pera": 37,
-            "Limone": 13
-          }
-        },
-        {
-          "from": "Lecco",
-          "to": "Fermo",
-          "merchandise": {
-            "Kiwi": 41,
-            "Limone": 6,
-            "Ananas": 21,
-            "Mela": 8,
-            "Banana": 6,
-            "Pompelmo": 32
-          }
-        }
-      ]
-    }
-  ],
-  [
-    {
-      "id": "s1",
-      "route": [
-        {
           "from": "Pavia",
           "to": "Milano",
           "merchandise": {
@@ -131,7 +60,7 @@
   ],
   [
     {
-      "id": "s2",
+      "id": "s1",
       "route": [
         {
           "from": "Bari",
@@ -188,7 +117,7 @@
   ],
   [
     {
-      "id": "s3",
+      "id": "s2",
       "route": [
         {
           "from": "Novara",
@@ -255,7 +184,7 @@
   ],
   [
     {
-      "id": "s4",
+      "id": "s3",
       "route": [
         {
           "from": "Roma",
@@ -290,7 +219,7 @@
   ],
   [
     {
-      "id": "s5",
+      "id": "s4",
       "route": [
         {
           "from": "Bari",
@@ -376,7 +305,7 @@
   ],
   [
     {
-      "id": "s6",
+      "id": "s5",
       "route": [
         {
           "from": "Matera",
@@ -452,7 +381,7 @@
   ],
   [
     {
-      "id": "s7",
+      "id": "s6",
       "route": [
         {
           "from": "Rovigo",
@@ -533,7 +462,7 @@
   ],
   [
     {
-      "id": "s8",
+      "id": "s7",
       "route": [
         {
           "from": "Como",
@@ -607,7 +536,7 @@
   ],
   [
     {
-      "id": "s9",
+      "id": "s8",
       "route": [
         {
           "from": "Lecce",
@@ -659,6 +588,77 @@
             "Limone": 39,
             "Fragola": 23,
             "Pera": 40
+          }
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "id": "s9",
+      "route": [
+        {
+          "from": "Rovigo",
+          "to": "Fermo",
+          "merchandise": {
+            "Pompelmo": 5
+          }
+        },
+        {
+          "from": "Fermo",
+          "to": "Prato",
+          "merchandise": {
+            "Uva": 11
+          }
+        },
+        {
+          "from": "Prato",
+          "to": "Bari",
+          "merchandise": {
+            "Arancia": 33,
+            "Limone": 3,
+            "Uva": 3,
+            "Ciliegia": 44,
+            "Ananas": 35,
+            "Banana": 4,
+            "Pera": 37,
+            "Mela": 29,
+            "Mango": 15
+          }
+        },
+        {
+          "from": "Bari",
+          "to": "Genova",
+          "merchandise": {
+            "Fragola": 30,
+            "Mango": 38,
+            "Arancia": 6,
+            "Pera": 12,
+            "Limone": 11,
+            "Pesca": 7
+          }
+        },
+        {
+          "from": "Genova",
+          "to": "Lecco",
+          "merchandise": {
+            "Pesca": 43,
+            "Ananas": 38,
+            "Pompelmo": 1,
+            "Pera": 37,
+            "Limone": 13
+          }
+        },
+        {
+          "from": "Lecco",
+          "to": "Fermo",
+          "merchandise": {
+            "Kiwi": 41,
+            "Limone": 6,
+            "Ananas": 21,
+            "Mela": 8,
+            "Banana": 6,
+            "Pompelmo": 32
           }
         }
       ]

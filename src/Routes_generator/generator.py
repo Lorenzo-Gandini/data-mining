@@ -22,13 +22,12 @@ def standard_routes_generator(cities,groceries,n_standard_routes):
         list_cities = []
 
         # n_trips is the number of trips in a route. 
-        # It is between 2 and n 
         n_trips = random.randint(2,10)
 
         # Number of total TRIPS 
         for j in range(n_trips):
-            # Create a sample of 3 distinct items.
-            unique_groceries = random.sample(groceries, (random.randint(1,10)))
+            # Create a sample of n distinct items.
+            unique_groceries = random.sample(groceries, (random.randint(2,10)))
             
             # Initializing the dictionary where the merchandise will be store in.
             # Generating the quantity for every item.

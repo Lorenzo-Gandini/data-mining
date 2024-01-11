@@ -35,37 +35,42 @@
     ]
   },
   {
-    "driver": "A",
+    "driver": "B",
     "route": [
       {
-        "from": "Verona",
-        "to": "Lecco",
+        "from": "Bari",
+        "to": "Cuneo",
         "merchandise": {
-          "Mela": 28,
-          "Limone": 12,
-          "Fragola": 22,
-          "Mango": 22,
-          "Ananas": 18,
-          "Pera": 20
-        }
-      },
-      {
-        "from": "Lecco",
-        "to": "Pisa",
-        "merchandise": {
-          "Mango": 19,
-          "Pompelmo": 29
-        }
-      },
-      {
-        "from": "Pisa",
-        "to": "Enna",
-        "merchandise": {
+          "Banana": 27,
+          "Mela": 21,
           "Ananas": 29,
-          "Banana": 24,
-          "Limone": 23,
-          "Pompelmo": 15,
-          "Ciliegia": 22
+          "Pera": 21,
+          "Mango": 38,
+          "Arancia": 25
+        }
+      },
+      {
+        "from": "Cuneo",
+        "to": "Napoli",
+        "merchandise": {
+          "Pompelmo": 29,
+          "Ananas": 17,
+          "Fragola": 19,
+          "Mango": 33,
+          "Limone": 39
+        }
+      },
+      {
+        "from": "Napoli",
+        "to": "Pavia",
+        "merchandise": {
+          "Limone": 24,
+          "Mela": 24,
+          "Pera": 26,
+          "Ananas": 25,
+          "Kiwi": 17,
+          "Uva": 25,
+          "Pesca": 24
         }
       }
     ]
@@ -153,42 +158,37 @@
     ]
   },
   {
-    "driver": "B",
+    "driver": "A",
     "route": [
       {
-        "from": "Bari",
-        "to": "Cuneo",
+        "from": "Verona",
+        "to": "Lecco",
         "merchandise": {
-          "Banana": 27,
-          "Mela": 21,
+          "Mela": 28,
+          "Limone": 12,
+          "Fragola": 22,
+          "Mango": 22,
+          "Ananas": 18,
+          "Pera": 20
+        }
+      },
+      {
+        "from": "Lecco",
+        "to": "Pisa",
+        "merchandise": {
+          "Mango": 19,
+          "Pompelmo": 29
+        }
+      },
+      {
+        "from": "Pisa",
+        "to": "Enna",
+        "merchandise": {
           "Ananas": 29,
-          "Pera": 21,
-          "Mango": 38,
-          "Arancia": 25
-        }
-      },
-      {
-        "from": "Cuneo",
-        "to": "Napoli",
-        "merchandise": {
-          "Pompelmo": 29,
-          "Ananas": 17,
-          "Fragola": 19,
-          "Mango": 33,
-          "Limone": 39
-        }
-      },
-      {
-        "from": "Napoli",
-        "to": "Pavia",
-        "merchandise": {
-          "Limone": 24,
-          "Mela": 24,
-          "Pera": 26,
-          "Ananas": 25,
-          "Kiwi": 17,
-          "Uva": 25,
-          "Pesca": 24
+          "Banana": 24,
+          "Limone": 23,
+          "Pompelmo": 15,
+          "Ciliegia": 22
         }
       }
     ]

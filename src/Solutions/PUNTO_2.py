@@ -17,7 +17,7 @@ def driver(city_weight, merch_weight,quantity_weight,dataset):
     for id in drivers:
         rank = Drivers_rank.standard_ranked(id,standard_route,actual_route,city_weight, merch_weight,quantity_weight)
         final_list.append(rank)
-        #print(rank)
+        print(rank)
 
     with open("results/driver"+str(dataset)+".json",'w') as outfile:
         json.dump(final_list,outfile,indent = 2)
