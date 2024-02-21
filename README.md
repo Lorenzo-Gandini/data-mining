@@ -2,6 +2,10 @@
 Repository for the Data Mining project course
 Simonato Nicolò - Russo Riccardo - Gandini Lorenzo
 
+The project consisted of a logistic company whose drivers didn't follow the routes they were given. Our task was to create new routes and assign them to the drivers to satisfy their preferences to reduce the deviation as much as possible. 
+- File "DM Project 23-24.docx.pdf" to see the full project 
+- File "DM23_Russo_Gandini_Simonato.pdf" to see the Final report
+
 To run the program, follow these steps:
 
 1) If you want to change the standard and actual routes, insert the new routes in the "/data" folder with the correct format (standardX.json / actualX.json) where X is an integer. You can also use the existing ones.
